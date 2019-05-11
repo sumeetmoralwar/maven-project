@@ -1,6 +1,6 @@
-Pipeline{
+pipeline{
 	any agent{
-		Stages{
+		stages{
 			stage('any text scm Checkout'){
 			git 'https://github.com/sumeetmoralwar/maven-project.git'}
 			
