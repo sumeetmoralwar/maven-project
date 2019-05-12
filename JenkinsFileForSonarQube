@@ -9,7 +9,7 @@ agent any
   {
     stage('create package with sonarqube analysis'){
       steps{
-        withSonarQubeEnv('SonarQubePipeLineJob'){
+        withSonarQubeEnv('sonar'){
           withMaven(maven: 'LocalMaven')
           sh 'mvn clean package sonar:sonar'
         }
