@@ -1,0 +1,16 @@
+pipeline{
+agent any
+  stages{
+    stage('checkout code'){
+    git 'https://github.com/sumeetmoralwar/maven-project.git'
+    }
+    
+    stage('create package with sonarqube analysis'){
+      steps{
+        withMaven(maven: 'LocalMaven')
+        sh 'mvn sonar:sonar clean package'
+      }
+    }
+  }
+
+}
