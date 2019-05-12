@@ -5,6 +5,8 @@ agent any
     git 'https://github.com/sumeetmoralwar/maven-project.git'
     }
 
+}
+{
     stage('create package with sonarqube analysis'){
       steps{
         withSonarQubeEnv('sonar'){
